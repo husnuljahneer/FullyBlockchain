@@ -55,14 +55,14 @@ describe('Blockchain', () => {
             it('returns true',()=>{
                 expect(Blockchain.isValidChain(blockchain.chain)).toBe(true);
             });
-        });
-        
-            
+        });   
         });
     }); 
+
     describe('isValidChain()', () => {
         
     });
+    
     describe('replaceChain()', () => {
         let errorMock , logMock;
 
@@ -123,15 +123,9 @@ describe('Blockchain', () => {
             it('Logs about chain replacement' , () => {
                 expect(logMock).toHaveBeenCalled();
             } )
-
           });
-          
-           
        });
-        
     });
-    
-    
     });
     
 

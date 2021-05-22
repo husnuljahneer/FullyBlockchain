@@ -9,7 +9,7 @@ describe('Block',()=>{
     const data = ['blockchain,data']
     const nonce = 1;
     const difficulty = 1;
-    const block = new Block({timestamp,lastHash,hash, data});
+    const block = new Block({timestamp,lastHash,hash,nonce,difficulty, data});
 
     it('has a  timestamp,lasthash,hash and data property',()=>{
         expect(block.timestamp).toEqual(timestamp);
@@ -65,7 +65,8 @@ describe('Block',()=>{
     });
 
     it('sets a `hash` that matches the difficulty criteria',()=>{
-        expect(minedBlock.hash.substring(0,minedBlock.difficulty)).toEqual('0',repeat(minedBlock.difficulty));
+        expect(minedBlock.hash.substring(0, minedBlock.difficulty))
+        .toEqual('0'.repeat(minedBlock.difficulty));
     });
 
 });
