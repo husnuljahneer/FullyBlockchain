@@ -12,13 +12,14 @@ describe('Wallet', () => {
         expect(wallet).toHaveProperty('balance');
     });
 
-    it('has a `public key`',() => {
+    it('has a `publicKey`',() => {
+        console.log(wallet.publicKey);        
         expect(wallet).toHaveProperty('publicKey');
     });
 
     describe('signing data', () => {
        const data = 'foobar'; 
-       it('verifies a signature',() => {
+       it('verifies a signature', () => {
            expect(
             verifySignature({
                 publicKey: wallet.publicKey,
@@ -28,12 +29,12 @@ describe('Wallet', () => {
            ).toBe(true);
     });
 
-    it('does not verify an invalid signature',() => {
+    it('does not verify an invalid signature', () => {
         expect(
             verifySignature({
                 publicKey: wallet.publicKey,
                 data,
-                signature: wallet.sign(data)
+                signature: new Wallet().sign(data)
             })
            ).toBe(false);
     });
