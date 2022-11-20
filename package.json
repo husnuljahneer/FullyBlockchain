@@ -20,7 +20,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cross-env": "^5.2.0",
+    "cross-env": "^7.0.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.4"
   },
