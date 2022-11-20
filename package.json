@@ -22,7 +22,7 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "jest": "^23.6.0",
-    "nodemon": "^1.18.4"
+    "nodemon": "^2.0.0"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
