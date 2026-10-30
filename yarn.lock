@@ -996,6 +996,31 @@
     tslib "^2.2.0"
     webcrypto-core "^1.2.0"
 
+"@redis/bloom@6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@redis/bloom/-/bloom-6.3.1.tgz#5dbbab09a81329bf567a76cfc5a3a9b298ed84bb"
+  integrity sha512-dpF9j2yJDoPzSCaZn0MSB3xzmnXQVJeTSAWJcQVcgbmluwhpFeemmII0cF1t+WYfoVS+shEFq79+MmUItgzJLg==
+
+"@redis/client@6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@redis/client/-/client-6.3.1.tgz#2c77b3835ddfecb7024b0518d363f0fba07fadb7"
+  integrity sha512-masbfVKULdoAofwddepZxRhWa4w6zvBHn6TRn90TRPrRkVIlGCur3pFqwWaCbMxtYI9twepkz63e/T/tEH8GjA==
+
+"@redis/json@6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@redis/json/-/json-6.3.1.tgz#b2ad71b13cbea2d2551537aee2d5c9ff06a6478c"
+  integrity sha512-fMz4kUwJzEftcU9EMaqsjZcUwzpTQLOYRqhQsAD6uKvZWeamblK13ZhgO5SzVSZVk31jmwLeTRpU5GAl5egfUw==
+
+"@redis/search@6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@redis/search/-/search-6.3.1.tgz#db2fd8592c69d142f62626757ddbbc22d310bc52"
+  integrity sha512-T67pvPUpW82VrZLvihO8O2DFMC7eY2oMAzMzapCbiPZn7mdWqHMEIlohYim12gIawT5kn6qT/Cvmm4WulKB+kQ==
+
+"@redis/time-series@6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@redis/time-series/-/time-series-6.3.1.tgz#a5afcae70455603e5f8f9a9ce1f8836f7859d1e1"
+  integrity sha512-MNDgrm+i63M/1a+XA+HcDsScwt4uBh/fGGJ84swTQZTFK5K5wMmxdlTRa4ZgmNJzjxMaszW/ipPScMUGV3aAMg==
+
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
@@ -3197,11 +3222,6 @@ dotenv@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-5.0.1.tgz#a5317459bd3d79ab88cff6e44057a6a3fbb1fcef"
   integrity sha512-4As8uPrjfwb7VXC+WnLCbXK7y+Ueb2B3zgNCePYfhxS1PYeaO1YTeplffTEcbfLhvFNGLAz90VvJs9yomG7bow==
-
-double-ended-queue@^2.1.0-0:
-  version "2.1.0-0"
-  resolved "https://registry.yarnpkg.com/double-ended-queue/-/double-ended-queue-2.1.0-0.tgz#103d3527fd31528f40188130c841efdd78264e5c"
-  integrity sha1-ED01J/0xUo9AGIEwyEHv3XgmTlw=
 
 duplexer2@~0.1.4:
   version "0.1.4"
@@ -7178,24 +7198,16 @@ realpath-native@^1.0.0:
   dependencies:
     util.promisify "^1.0.0"
 
-redis-commands@^1.2.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/redis-commands/-/redis-commands-1.7.0.tgz#15a6fea2d58281e27b1cd1acfb4b293e278c3a89"
-  integrity sha512-nJWqw3bTFy21hX/CPKHth6sfhZbdiHP6bTawSgQBlKOVRG7EZkfHbbHwQJnrE4vsQf0CMNE+3gJ4Fmm16vdVlQ==
-
-redis-parser@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/redis-parser/-/redis-parser-2.6.0.tgz#52ed09dacac108f1a631c07e9b69941e7a19504b"
-  integrity sha1-Uu0J2srBCPGmMcB+m2mUHnoZUEs=
-
-redis@^2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/redis/-/redis-2.8.0.tgz#202288e3f58c49f6079d97af7a10e1303ae14b02"
-  integrity sha512-M1OkonEQwtRmZv4tEWF2VgpG0JWJ8Fv1PhlgT5+B+uNq2cA3Rt1Yt/ryoR+vQNOQcIEgdCdfH0jr3bDpihAw1A==
+redis@^6.0.0:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/redis/-/redis-6.3.1.tgz#2a8565c7254790b1346b241968b88304e949e6ef"
+  integrity sha512-mV96ZKxQ4CGn3SyEGaY0Lb9YA443mdVey3c+mdr0NAUaBxiOZGoYCWX8PoM55kictSOmxlJRtZJxIsmZm3jL+w==
   dependencies:
-    double-ended-queue "^2.1.0-0"
-    redis-commands "^1.2.0"
-    redis-parser "^2.6.0"
+    "@redis/bloom" "6.3.1"
+    "@redis/client" "6.3.1"
+    "@redis/json" "6.3.1"
+    "@redis/search" "6.3.1"
+    "@redis/time-series" "6.3.1"
 
 regenerate-unicode-properties@^8.2.0:
   version "8.2.0"
